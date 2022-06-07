@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "redis.server.maxWaitMillis",
+      "type": "java.lang.String",
+      "description": "Description for redis.server.maxWaitMillis."
+  }
+] }
