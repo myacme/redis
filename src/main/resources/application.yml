@@ -1,0 +1,11 @@
+spring:
+  redis:
+    host: 192.168.152.128
+    port: 6379
+    password: 123456
+    maxIdle: 50
+    maxWaitMillis: 5000
+    maxTotal: 500
+
+server:
+  port: 8080

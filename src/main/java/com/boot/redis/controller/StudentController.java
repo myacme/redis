@@ -41,19 +41,21 @@ public class StudentController {
 	/**
 	 * 存 相当于添加和修改
 	 */
-	@PostMapping("/set")
-	public void set(@RequestBody Student student) {
+	@GetMapping("/set/{key}")
+	public String set(@PathVariable("key") String student) {
 		// 调用RedisTemplate封装好的k,v来存入实体类
-		redisTemplate.opsForValue().set("student", student);
+		redisTemplate.opsForValue().set(student, student);
+		return "success";
 	}
 
 	/**
 	 * 取 相当于查询
 	 */
 	@GetMapping("/get/{key}")
-	public Student get(@PathVariable("key") String key) {
+	public Object get(@PathVariable("key") String key) {
 		// 调用RedisTemplate获取方法
-		return (Student) redisTemplate.opsForValue().get(key);
+		Object o = redisTemplate.opsForValue().get(key);
+		return o;
 	}
 
 	/**
