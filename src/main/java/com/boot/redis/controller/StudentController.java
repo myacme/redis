@@ -1,16 +1,13 @@
 package com.boot.redis.controller;
 
 
-import com.boot.redis.entity.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
 
-/**
- * @Author zhushaojie
- * @Date 2020/6/8 10:17
- * @Version 1.0
- */
 @RestController
 public class StudentController {
 	//===============redisTemplate 操作不同的数据类型，api和我们的命令是一样的===========
