@@ -1,8 +1,8 @@
 spring:
   redis:
-    host: 192.168.152.1
+    host: 192.168.75.128
     port: 6379
-    password: redis666
+    password: redis@123
     maxIdle: 50
     maxWaitMillis: 5000
     maxTotal: 500
