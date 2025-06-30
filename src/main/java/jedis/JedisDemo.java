@@ -13,7 +13,7 @@ import redis.clients.jedis.JedisPoolConfig;
  */
 public class JedisDemo {
     public static void main(String[] args) {
-        demo2();
+        demo1();
     }
 
 
@@ -39,6 +39,9 @@ public class JedisDemo {
         jedis.hset("hash", "hash1", "hash1");
         System.out.println(jedis.hget("hash", "hash1"));
         jedis.hgetAll("hash");
+        //bit
+        jedis.setbit("bit", 1, "10");
+        System.out.println(jedis.getbit("bit", 1));
         // 4.释放资源
         jedis.close();
     }
