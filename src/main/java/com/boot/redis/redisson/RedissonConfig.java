@@ -1,4 +1,4 @@
-package com.boot.redis.config;
+package com.boot.redis.redisson;
 
 
 import org.redisson.Redisson;
