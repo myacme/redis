@@ -16,3 +16,14 @@ spring:
 
 server:
   port: 8080
+
+
+logging:
+  level:
+    root: INFO
+    com.boot: DEBUG  # 项目包的日志级别
+    org.springframework: WARN  # Spring框架的日志级别
+    org.redisson: INFO  # Redisson相关日志级别
+    org.springframework.data.redis: INFO  # Redis数据访问日志级别
+  config: classpath:logback.xml
+

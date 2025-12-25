@@ -40,7 +40,7 @@ public class JedisDemo {
         System.out.println(jedis.hget("hash", "hash1"));
         jedis.hgetAll("hash");
         //bit
-        jedis.setbit("bit", 1, "10");
+        jedis.setbit("bit", 1, false);
         System.out.println(jedis.getbit("bit", 1));
         // 4.释放资源
         jedis.close();
@@ -74,9 +74,7 @@ public class JedisDemo {
                 jedis.close();
             }
             // 释放连接池
-            if (jedisPool != null) {
-                jedisPool.close();
-            }
+            jedisPool.close();
         }
     }
 }
